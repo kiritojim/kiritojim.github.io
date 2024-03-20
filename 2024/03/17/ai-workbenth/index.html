@@ -6,17 +6,23 @@
   
   <title>NVIDIA AI Workbench安裝過程筆記與心得 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Windows版首先先到NVIDIA網站下載工具 NVIDIA AI Workbench 在安裝過程中發現錯誤原因不明 試過先安裝ubuntu在安裝也行不通 只能暫時放棄改裝Linux版 Linux版">
+  <meta name="description" content="Windows版首先先到NVIDIA網站下載工具 NVIDIA AI Workbench 在安裝過程中發現錯誤原因不明 試過先安裝ubuntu在安裝也行不通 只能暫時放棄改裝Linux版 3&#x2F;19更新  NVIDIA AI Workbench出正式版裝正式版後就正常了    Linux版1. 安裝Ubuntu這次選的作業系統是ubuntu 首先去官方網站下載ISO檔 Ububtu 下載好">
 <meta property="og:type" content="article">
 <meta property="og:title" content="NVIDIA AI Workbench安裝過程筆記與心得">
 <meta property="og:url" content="http://example.com/2024/03/17/ai-workbenth/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Windows版首先先到NVIDIA網站下載工具 NVIDIA AI Workbench 在安裝過程中發現錯誤原因不明 試過先安裝ubuntu在安裝也行不通 只能暫時放棄改裝Linux版 Linux版">
+<meta property="og:description" content="Windows版首先先到NVIDIA網站下載工具 NVIDIA AI Workbench 在安裝過程中發現錯誤原因不明 試過先安裝ubuntu在安裝也行不通 只能暫時放棄改裝Linux版 3&#x2F;19更新  NVIDIA AI Workbench出正式版裝正式版後就正常了    Linux版1. 安裝Ubuntu這次選的作業系統是ubuntu 首先去官方網站下載ISO檔 Ububtu 下載好">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://imgur.com/a/MuLn0Wd">
+<meta property="og:image" content="https://imgur.com/a/SxCWlAS">
+<meta property="og:image" content="https://imgur.com/a/y66QeGT">
+<meta property="og:image" content="https://imgur.com/a/zY7Ec1u">
+<meta property="og:image" content="https://imgur.com/a/sttje7S">
 <meta property="article:published_time" content="2024-03-16T18:49:14.000Z">
-<meta property="article:modified_time" content="2024-03-17T16:11:44.841Z">
+<meta property="article:modified_time" content="2024-03-20T05:33:24.697Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://imgur.com/a/MuLn0Wd">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -95,12 +101,34 @@
       
         <h2 id="Windows版"><a href="#Windows版" class="headerlink" title="Windows版"></a>Windows版</h2><p>首先先到NVIDIA網站下載工具</p>
 <p><a target="_blank" rel="noopener" href="https://www.nvidia.com/en-us/deep-learning-ai/solutions/data-science/workbench/">NVIDIA AI Workbench</a></p>
-<p>在安裝過程中發現錯誤<br>原因不明 試過先安裝ubuntu在安裝也行不通 只能暫時放棄改裝Linux版</p>
-<h2 id="Linux版"><a href="#Linux版" class="headerlink" title="Linux版"></a>Linux版</h2>
+<p>在安裝過程中發現錯誤<br>原因不明 試過先安裝ubuntu在安裝也行不通 只能暫時放棄改裝Linux版<br><img src="https://imgur.com/a/MuLn0Wd" alt="Error"></p>
+<p>3&#x2F;19更新 </p>
+<p>NVIDIA AI Workbench出正式版<br>裝正式版後就正常了</p>
+<p><img src="https://imgur.com/a/SxCWlAS" alt="Win1"></p>
+<p><img src="https://imgur.com/a/y66QeGT" alt="Win2"></p>
+<p><img src="https://imgur.com/a/zY7Ec1u" alt="Win3"></p>
+<h2 id="Linux版"><a href="#Linux版" class="headerlink" title="Linux版"></a>Linux版</h2><h3 id="1-安裝Ubuntu"><a href="#1-安裝Ubuntu" class="headerlink" title="1. 安裝Ubuntu"></a>1. 安裝Ubuntu</h3><p>這次選的作業系統是ubuntu</p>
+<p>首先去官方網站下載ISO檔</p>
+<p><a target="_blank" rel="noopener" href="https://ubuntu.com/">Ububtu</a></p>
+<p>下載好後需準備USB作為開機碟</p>
+<p>接著下載製作開機碟的軟體，這邊使用rufus</p>
+<p><a target="_blank" rel="noopener" href="https://rufus.ie/zh_TW/">rufus</a></p>
+<p>選擇剛剛下載的ubuntu的ISO檔，其他設定用預設的，再選執行，等幾分鐘就製作完開機碟。</p>
+<p><img src="https://imgur.com/a/sttje7S" alt="rufus1"></p>
+<p>再來就是安裝Ubuntu系統，這次是用雙系統雙硬碟。</p>
+<p>先重開機進BIOS，每台電腦進去的方式都不太一樣，以筆者為例是按Del或F2。</p>
+<p>進到BIOS系統後先把隨身碟的開機優先順序拉到C槽上面，再點F10儲存設定，即可進入Ubuntu安裝介面。</p>
+<p>裝Ubuntu的過程基本上與Windows大同小異，但是到了安裝類型的步驟就要特別留意，選擇”其他選項”，千萬不能選到中間的格式化硬碟，否則Windows的資料會被清掉。</p>
+<p>選擇其他選項後就是分配磁碟空間，關於分配空間的細項每個人都有不同的分法，在此不再贅述。值得注意的是要小心不要選到自己已使用的Windows硬碟，再三確認有安裝好後重啟系統即安裝完成。</p>
+<h3 id="2-在Ubuntu安裝NVIDIA-ai-Workbench"><a href="#2-在Ubuntu安裝NVIDIA-ai-Workbench" class="headerlink" title="2. 在Ubuntu安裝NVIDIA ai Workbench"></a>2. 在Ubuntu安裝NVIDIA ai Workbench</h3><p>和Windows版相同，在NVIDIA官網下載安裝檔，但不同的是下載下來的檔案副檔名為AppImage，無法用套件安裝器下載，需要用其他方式安裝。</p>
+<h4 id="2-1-AppImage檔安裝"><a href="#2-1-AppImage檔安裝" class="headerlink" title="2.1 AppImage檔安裝"></a>2.1 AppImage檔安裝</h4><p>首先要先賦予執行權限，對檔案右鍵，在權限的欄位勾選是可執行檔。</p>
+<p>再來是雙擊檔案，但筆者在這邊嘗試無效，只能使用終端機執行</p>
+<p>使用cd指令進入Download資料夾後，輸入.&#x2F;檔名.AppImage開啟。</p>
+<h4 id="2-1-NVIDIA-ai-Workbench安裝"><a href="#2-1-NVIDIA-ai-Workbench安裝" class="headerlink" title="2.1 NVIDIA ai Workbench安裝"></a>2.1 NVIDIA ai Workbench安裝</h4>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/03/17/ai-workbenth/" data-id="cltzd954t0001coto1hh7h4ow" data-title="NVIDIA AI Workbench安裝過程筆記與心得" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/03/17/ai-workbenth/" data-id="cltzdcw63000058to9pmn80no" data-title="NVIDIA AI Workbench安裝過程筆記與心得" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
