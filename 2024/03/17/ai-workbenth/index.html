@@ -19,7 +19,7 @@
 <meta property="og:image" content="http://example.com/images/Success3.jpg">
 <meta property="og:image" content="http://example.com/images/rufus.jpg">
 <meta property="article:published_time" content="2024-03-16T18:49:14.000Z">
-<meta property="article:modified_time" content="2024-03-20T05:41:26.407Z">
+<meta property="article:modified_time" content="2024-03-20T15:08:55.758Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/ApplicationError.jpg">
@@ -121,14 +121,26 @@
 <p>裝Ubuntu的過程基本上與Windows大同小異，但是到了安裝類型的步驟就要特別留意，選擇”其他選項”，千萬不能選到中間的格式化硬碟，否則Windows的資料會被清掉。</p>
 <p>選擇其他選項後就是分配磁碟空間，關於分配空間的細項每個人都有不同的分法，在此不再贅述。值得注意的是要小心不要選到自己已使用的Windows硬碟，再三確認有安裝好後重啟系統即安裝完成。</p>
 <h3 id="2-在Ubuntu安裝NVIDIA-ai-Workbench"><a href="#2-在Ubuntu安裝NVIDIA-ai-Workbench" class="headerlink" title="2. 在Ubuntu安裝NVIDIA ai Workbench"></a>2. 在Ubuntu安裝NVIDIA ai Workbench</h3><p>和Windows版相同，在NVIDIA官網下載安裝檔，但不同的是下載下來的檔案副檔名為AppImage，無法用套件安裝器下載，需要用其他方式安裝。</p>
+<p><a href="/images/AppImage.png">AppImage</a></p>
 <h4 id="2-1-AppImage檔安裝"><a href="#2-1-AppImage檔安裝" class="headerlink" title="2.1 AppImage檔安裝"></a>2.1 AppImage檔安裝</h4><p>首先要先賦予執行權限，對檔案右鍵，在權限的欄位勾選是可執行檔。</p>
 <p>再來是雙擊檔案，但筆者在這邊嘗試無效，只能使用終端機執行</p>
 <p>使用cd指令進入Download資料夾後，輸入.&#x2F;檔名.AppImage開啟。</p>
-<h4 id="2-1-NVIDIA-ai-Workbench安裝"><a href="#2-1-NVIDIA-ai-Workbench安裝" class="headerlink" title="2.1 NVIDIA ai Workbench安裝"></a>2.1 NVIDIA ai Workbench安裝</h4>
+<p>可打開檔案的時候會發現無法執行<br>用終端機看log會發現問題<br><a href="/images/fuse.jpg">fuse</a></p>
+<p>缺少FUSE庫，用此指令在終端機執行即可安裝</p>
+<p><a href="/images/fuse2.jpg">fuse2</a></p>
+<h4 id="2-1-NVIDIA-ai-Workbench安裝"><a href="#2-1-NVIDIA-ai-Workbench安裝" class="headerlink" title="2.1 NVIDIA ai Workbench安裝"></a>2.1 NVIDIA ai Workbench安裝</h4><p>成功進去安裝程式後會看到Application Error</p>
+<p>用終端機看log會發現問題</p>
+<p><a href="/images/log.png">log</a></p>
+<p>可以發現是缺少nvidia-container-toolkit的套件</p>
+<p>照者官網的指令安裝即可</p>
+<p><a href="/images/toolkit.jpg">toolkit</a></p>
+<p>裝完後再重新打開安裝就完成了。</p>
+<p><a href="/images/finish.jpg">finish</a></p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/03/17/ai-workbenth/" data-id="cltzxs3hf0000agtohfm8hgoj" data-title="NVIDIA AI Workbench安裝過程筆記與心得" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/03/17/ai-workbenth/" data-id="cltzxwsue0000mcto2ljr5g4c" data-title="NVIDIA AI Workbench安裝過程筆記與心得" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
